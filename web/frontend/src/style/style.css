@@ -1,0 +1,111 @@
+/* 전체 컨테이너 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f9fafb;
+}
+
+/* 제목 */
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #1e40af;
+}
+
+/* 5열 2행 그리드 */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+}
+
+/* 각각 행사 카드 */
+.event-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.event-card:hover {
+    box-shadow: 0 6px 14px rgb(0 0 0 / 0.15);
+}
+
+/* 이미지 */
+.event-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* 카드 내용 영역 */
+.event-content {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 제목 링크 */
+.event-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.event-title:hover {
+    text-decoration: underline;
+}
+
+/* 장소, 날짜 텍스트 */
+.event-info {
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* 더보기 버튼 컨테이너 */
+.load-more-container {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 더보기 버튼 */
+.load-more-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    font-size: 1rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover:not(:disabled) {
+    background-color: #1e40af;
+}
+
+.load-more-btn:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
